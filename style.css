@@ -1,0 +1,96 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f4f8;
+text-align: center;
+padding: 20px;
+}
+
+h1 {
+color: #333;
+}
+
+.intro {
+color: gray;
+margin-bottom: 30px;
+}
+
+/* Arrange the cards */
+.container {
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+/* Style each card */
+.card {
+background-color: white;
+width: 250px;
+padding: 20px;
+border: 2px solid lightgray;
+border-radius: 10px;
+
+display: flex;
+flex-direction: column;
+
+}
+
+/* Card headings */
+.card h2 {
+color: #5145cd;
+}
+
+/* Prices */
+.card h3 {
+font-size: 20px;
+}
+
+/* Features */
+.card ul {
+text-align: left;
+line-height: 2;
+flex-grow: 1;
+}
+
+/* Buttons */
+.card label {
+background-color: #5145cd;
+color: white;
+padding: 10px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+/* Hide radio circles */
+.card input {
+display: none;
+}
+
+/* Highlight popular card */
+.popular {
+border: 3px solid #5145cd;
+}
+
+/* Popular badge */
+.badge {
+background-color: #5145cd;
+color: white;
+padding: 5px;
+}
+
+/* Show selected plan */
+.card input:checked + label {
+background-color: black;
+}
+
+/* Highlight selected card */
+.card:has(input:checked) {
+border-color: #5145cd;
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+.container {
+flex-direction: column;
+align-items: center;
+}
+}
